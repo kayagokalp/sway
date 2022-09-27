@@ -589,7 +589,7 @@ jobs:
         uses: actions-rs/cargo@v1
         with:
           command: install
-          args: --profile=release --path ./forc
+          args: --profile=release --target ${{ matrix.job.target }} --path ./forc
 
       - name: Install Forc-Fmt
         uses: actions-rs/cargo@v1
